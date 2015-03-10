@@ -79,7 +79,10 @@
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\EfDbContext.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Customers.sql" />
+    <Content Include="Donations.sql" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
