@@ -8,10 +8,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Burkina.Donations.Domain.Entities
 {
-    public class Customer
+    public class Donor
     {
         [Key]
-        public int ID_CUSTOMER { get; set; }
+        public int ID_DONOR { get; set; }
         public string DS_NAME { get; set; }
         public string DS_EMAIL { get; set; }
         public string DS_PASSWORD { get; set; }

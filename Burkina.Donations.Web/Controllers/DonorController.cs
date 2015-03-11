@@ -7,15 +7,15 @@ using Burkina.Donations.Domain.Repository;
 
 namespace Burkina.Donations.Web.Controllers
 {
-    public class CustomerController : Controller
+    public class DonorController : Controller
     {
-        private CustomerRepository _repository;
-        // GET: Customer
+        private DonorRepository _repository;
+        // GET: Donor
         public ActionResult Index()
         {
-            _repository = new CustomerRepository();
-            var customer = _repository.Customer;
-            return View(customer);
+            _repository = new DonorRepository();
+            var donor = _repository.Donor;
+            return View(donor);
         }
     }
 }

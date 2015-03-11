@@ -11,11 +11,11 @@ namespace Burkina.Donations.Domain.Repository
 {
     public class EfDbContext : DbContext
     {
-        public DbSet<Customer> dsCustomer { get; set; }
+        public DbSet<Donor> dsDonor { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
         {
-            modelbuilder.Entity<Customer>().ToTable("tbCustomers");
+            modelbuilder.Entity<Donor>().ToTable("Donors");
             /*modelbuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelbuilder.Entity<Customer>().ToTable("tbCustomers");*/
         }

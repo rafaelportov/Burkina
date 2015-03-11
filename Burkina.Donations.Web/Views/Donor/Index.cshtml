@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Burkina.Donations.Domain.Entities.Customer>
+﻿@model IEnumerable<Burkina.Donations.Domain.Entities.Donor>
 
 @{
     ViewBag.Title = "Index";
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.DS_PASSWORD)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_CUSTOMER }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_CUSTOMER }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_CUSTOMER })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_DONOR }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_DONOR }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_DONOR })
         </td>
     </tr>
 }
