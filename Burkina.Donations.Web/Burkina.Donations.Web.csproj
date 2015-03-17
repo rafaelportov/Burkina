@@ -93,6 +93,9 @@
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="img\Burkina.png" />
+    <Content Include="img\hr-emp-emp.png" />
     <Content Include="css\style.css" />
     <Content Include="font-awesome\css\font-awesome.css" />
     <Content Include="font-awesome\css\font-awesome.min.css" />
@@ -133,6 +136,7 @@
     <Content Include="font-awesome\scss\_stacked.scss" />
     <Content Include="font-awesome\scss\_variables.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="img\flag.png" />
     <Content Include="img\Home3.jpg" />
     <Content Include="img\icons\button-icons.png" />
     <Content Include="img\icons\grid-menu-icons.png" />
@@ -147,6 +151,7 @@
     <Content Include="img\icons\social-icons2.png" />
     <Content Include="img\icons\weather-icons.png" />
     <Content Include="img\icons\weather-main.png" />
+    <Content Include="img\Mapa.png" />
     <Content Include="img\team\CarolinaBernades.jpg" />
     <Content Include="img\team\DeborahCouto.jpg" />
     <Content Include="img\team\ElianeMartins.jpg" />
@@ -180,10 +185,13 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\DonorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -196,7 +204,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Donor\Index.cshtml" />
+    <Content Include="Views\Donor\Doadores.cshtml" />
+    <Content Include="Views\Donation\DonationsTotal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

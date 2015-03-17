@@ -325,6 +325,13 @@ hr {
     font-size: 40px;
 }
 
+.burkina {
+	width:100%;
+	position:relative;
+	
+	background: url(../img/Burkina.png) no-repeat top center;
+}
+
 .intro-text {
     font-size: 18px;
 }

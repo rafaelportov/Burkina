@@ -11,7 +11,7 @@ namespace Burkina.Donations.Web.Controllers
     {
         private DonorRepository _repository;
         // GET: Donor
-        public ActionResult Index()
+        public ActionResult Doadores()
         {
             _repository = new DonorRepository();
             var donor = _repository.Donor;

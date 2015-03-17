@@ -1,16 +1,19 @@
 ﻿@model IEnumerable<Burkina.Donations.Domain.Entities.Donor>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Doadores";
 }
 
-<h2>Index</h2>
+<h2>Doadores</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_DONOR)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.DS_NAME)
         </th>
@@ -23,8 +26,13 @@
         <th></th>
     </tr>
 
+    int total = 0;
+
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_DONOR)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.DS_NAME)
         </td>
@@ -41,5 +49,7 @@
         </td>
     </tr>
 }
+
+    <h2>@Model.Sum(model => model.ID_DONOR) </h2>
 
 </table>

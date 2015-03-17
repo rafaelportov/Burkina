@@ -1,40 +1,442 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <!--<title>ViewBag.Title - My ASP.NET Application</title>-->
+    <!--Daqui pra baixo estava no home-->
+    <title>Água para Burkina</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <!-- Squad theme CSS -->
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/color/default.css" rel="stylesheet">
+    <!-- Chama CSS do Gilberto de qtas doacoes -->
+    <link href="~/css/main.css" rel="stylesheet">
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- style="background-color:#007A46">-->
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="load"></div>
+    </div>
+
+    <!--Barra de Navegação-->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="home.html">
+                    <h1>Venha fazer parte desse projeto</h1>
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
+                    <li class="active"><a href="#intro">Home</a></li>
+                    <li><a href="#service">Ajudados</a></li>
+                    <li><a href="#about">Ajudantes</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projetos <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Diminua a caminhada</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
-    </div>
+        <!-- /.container -->
+    </nav>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <!-- Section: intro -->
+    <section id="intro" class="intro">
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+        <div class="slogan">
+            <h2>BEM-VINDO A <span class="text_color">BURKINA FASO</span> </h2>
+            <h4>SEJA O PRÓXIMO A AJUDAR UM DOS PAÍSES MAIS POBRES DO MUNDO</h4>
+        </div>
+        <div class="page-scroll">
+            <a href="#service" class="btn btn-circle">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
+        </div>
+    </section>
+
+    @RenderSection("StatisticsData");
+
+    <!-- /Section: intro -->
+    <!-- Section: Where your money goes-->
+    <!--<section id="service" class="home-section text-center bg-gray" style="background-color:#007A46">
+
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2 style="color:#FFFFFF">
+                                    SAIBA PARA ONDE O SEU DINHEIRO ESTÁ INDO
+                                </h2>
+                                <i class="fa fa-2x fa-angle-down" style="color:white"></i>
+                            </div>
+                            <img class="bottom" src="/img/Burkina.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+
+    <!-- Section: money -->
+    <!--<section id="burkina" class="burkina">
+        <div>
+            >
+            <h2>Teste</h2>
+        </div>
+    </section>-->
+
+
+    <!-- Section: About Who are helping -->
+    <section id="about" class="home-section text-center">
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>Quem está ajudando...</h2> <!--style="color:#FFFFFF">-->
+                                <i class="fa fa-2x fa-angle-down"> </i> <!-- style="color:white"> Esta linha exibe a setinha pra baixo do Quem esta ajudando-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.8s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Natã Ventura</h5>
+                                <p class="subtitle">Juiz de Fora-MG</p>
+                                <div class="avatar"><img src="~/img/team/NataVentura.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Vanessa Orsi</h5>
+                                <p class="subtitle">Alfenas-MG</p>
+                                <div class="avatar"><img src="~/img/team/VanessaOrsi.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div><div></div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Neto e Ana Paula</h5>
+                                <p class="subtitle">Alfenas-MG</p>
+                                <div class="avatar"><img src="~/img/team/NetoAnaPaula.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Elias Granato</h5>
+                                <p class="subtitle">Alfenas-MG</p>
+                                <div class="avatar"><img src="~/img/team/EliasGranato.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Déborah Couto</h5>
+                                <p class="subtitle">Brasília-DF</p>
+                                <div class="avatar"><img src="~/img/team/DeborahCouto.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.2s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Rafael Porto</h5>
+                                <p class="subtitle">Jundiaí-SP</p>
+                                <div class="avatar"><img src="~/img/team/RafaelPorto.jpg" alt="" class="img-responsive img-circle" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Gabriel Porto</h5>
+                                <p class="subtitle">Elói Mendes-MG</p>
+                                <div class="avatar"><img src="~/img/team/GabrielPorto.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Priscila Franco</h5>
+                                <p class="subtitle">Gold Coast-QLD-Australia</p>
+                                <div class="avatar"><img src="~/img/team/PriscilaFranco.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Juliene Carolina</h5>
+                                <p class="subtitle">Alfenas-MG</p>
+                                <div class="avatar"><img src="~/img/team/JulieneCarolina.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Eliane Martins</h5>
+                                <p class="subtitle">Elói Mendes-MG</p>
+                                <div class="avatar"><img src="~/img/team/ElianeMartins.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Thayssa Martins</h5>
+                                <p class="subtitle">Jundiaí-SP</p>
+                                <div class="avatar"><img src="~/img/team/ThayssaMartins.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Carolina Bernades</h5>
+                                <p class="subtitle">Alfenas-MG</p>
+                                <div class="avatar"><img src="~/img/team/CarolinaBernades.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Rodrigo Santos</h5>
+                                <p class="subtitle">Campinas-SP</p>
+                                <div class="avatar"><img src="~/img/team/RodrigoSantos.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="wow bounceInUp" data-wow-delay="1s">
+                        <div class="team boxed-grey">
+                            <div class="inner">
+                                <h5>Flávia Rocha</h5>
+                                <p class="subtitle">Alfenas-MG</p>
+                                <div class="avatar"><img src="~/img/team/FlaviaRocha.jpg" alt="" class="img-responsive img-circle" /></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: contact -->
+    <section id="contact" class="home-section text-center" style="background-color:#FFFACD">
+        <div class="heading-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>Contato</h2>
+                                <i class="fa fa-2x fa-angle-down"></i> <!-- style="color:white"></i>Esta linha exibe a setinha pra baixo do Contato-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="boxed-grey">
+                        <form id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">
+                                            Nome
+                                        </label>
+                                        <input type="text" class="form-control" id="name" placeholder="Nome" required="required" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">
+                                            Email
+                                        </label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-envelope"></span>
+                                            </span>
+                                            <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject">
+                                            Assunto
+                                        </label>
+                                        <select id="subject" name="subject" class="form-control" required="required">
+                                            <option value="na" selected="">Escolha:</option>
+                                            <option value="service">Dúvidas</option>
+                                            <option value="suggestions">Sugestões</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">
+                                            Mensagem
+                                        </label>
+                                        <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                                  placeholder="Mensagem"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                                        Enviar Mensagem
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="widget-contact">
+                        <!--<h5>Main Office</h5>
+
+                        <address>
+                          <strong>Squas Design, Inc.</strong><br>
+                          Tower 795 Folsom Ave, Beautiful Suite 600<br>
+                          San Francisco, CA 94107<br>
+                          <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+
+                        <address>
+                          <strong>Email</strong><br>
+                          <a href="mailto:#">email.name@example.com</a>
+                        </address>	-->
+
+                        <address>
+                            <strong>
+                                <!-- style="color:#FFFFFF">-->
+                                Acesse nossa página no Facebook
+                            </strong><br>
+                            <ul class="company-social">
+                                <li class="social-facebook"><a href="https://www.facebook.com/groups/752091634832317/?ref=br_tf" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            </ul>
+                        </address>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /Section: contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="wow shake" data-wow-delay="0.4s">
+                        <div class="page-scroll marginbot-30">
+                            <a href="#intro" id="totop" class="btn btn-circle">
+                                <i class="fa fa-angle-double-up animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>&copy;Copyright 2014 - Squad. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core JavaScript Files -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.easing.min.js"></script>
+    <script src="~/js/jquery.scrollTo.js"></script>
+    <script src="~/js/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/js/custom.js"></script>
+    @RenderBody();
 </body>
 </html>

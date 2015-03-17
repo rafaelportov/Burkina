@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Burkina.Donations.Domain.Entities.Donation>
+
+@{
+    ViewBag.Title = "DonationsTotal";
+    double total = 0;
+    int count = 0;
+}
+
+
+@foreach (var item in Model)
+{
+    total += item.VL_DONATION;
+    count++;
+}
+
+@section StatisticsData{
+<section class="statistics">
+    <!-- Essa Grid que vai colocar as coisas no centro da pagina -->
+    <div class="grid">
+        <header>
+            <h2>Estatísticas</h2>
+        </header>
+        <div class="nos-container">
+            <div class="nos no-1">
+                <div class="no">
+                    @count
+                </div>
+                Total de Doações
+            </div>
+            <div class="nos no-2">
+                <div class="no">
+                    R$ @total
+                </div>
+                Total Doado
+            </div>
+            <div class="nos no-3">
+                <div class="no" style="color:#FF4500">R$ 16839,33</div>
+                Total restante
+            </div>
+            <br class="clear">
+            <div id="comment_box" style="display: none;">
+                <span class="comment_arrow"></span>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+}
