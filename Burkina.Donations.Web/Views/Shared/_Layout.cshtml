@@ -41,16 +41,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#intro">Home</a></li>
-                    <li><a href="#service">Ajudados</a></li>
-                    <li><a href="#about">Ajudantes</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li class="active"><a href="#intro">Home|</a></li>
+                    <li><a href="#service">Ajudados|</a></li>
+                    <li><a href="#about">Ajudantes|</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projetos <b class="caret"></b></a>
+                        <a href="#projects" class="dropdown-toggle" data-toggle="dropdown">Projetos|<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Diminua a caminhada</a></li>
+                            <li><a href="#diminua">Diminua a caminhada</a></li>
                         </ul>
                     </li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#ajude">Ajude</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -72,12 +73,12 @@
         </div>
     </section>
 
+    <!-- Section: Statistics-->
     @RenderSection("StatisticsData");
 
-    <!-- /Section: intro -->
-    <!-- Section: Where your money goes-->
-    <!--<section id="service" class="home-section text-center bg-gray" style="background-color:#007A46">
 
+    <!-- Section: Where your money goes-->
+    <section id="service" class="home-section text-center bg-gray" style="background-color:#007A46">
         <div class="heading-about">
             <div class="container">
                 <div class="row">
@@ -89,22 +90,69 @@
                                 </h2>
                                 <i class="fa fa-2x fa-angle-down" style="color:white"></i>
                             </div>
-                            <img class="bottom" src="/img/Burkina.png">
+                        </div>
+                        <img src="~/img/Mapa.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: About Burkina-->
+    <section id="service" class="home-section text-center bg-white">
+        <img src="~/img/BurkinaFlag2.png" align="middle">
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>MAIS SOBRE BURKINA FASO</h2>
+                                <i class="fa fa-2x fa-angle-down"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>-->
+        <img src="~/img/statisticsBurkina.png" align="middle">
+    </section>
 
-
-    <!-- Section: money -->
-    <!--<section id="burkina" class="burkina">
-        <div>
-            >
-            <h2>Teste</h2>
+    <section id="service" style="background-color:#ffff33">
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-1">
+                        <img src="~/img/BurkinaGDP.png">
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>-->
+    </section>
+
+    <!-- Section: About Burkina-->
+    <section id="diminua" class="home-section text-center" style="background-color:black">
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2><b>PROJETOS</b></h2>
+                                <h2 style="color:#FFFFFF">DIMINUA A CAMINHADA</h2>
+                                <i class="fa fa-2x fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <video width="820" controls>
+            <source src="~/videos/water change everything.ogg" type="video/ogg">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
+
 
 
     <!-- Section: About Who are helping -->

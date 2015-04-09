@@ -94,7 +94,12 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\main.css" />
+    <Content Include="home - Copy.html" />
     <Content Include="img\Burkina.png" />
+    <Content Include="img\burkina1.png" />
+    <Content Include="img\BurkinaFlag.jpg" />
+    <Content Include="img\BurkinaFlag2.png" />
+    <Content Include="img\BurkinaGDP.png" />
     <Content Include="img\hr-emp-emp.png" />
     <Content Include="css\style.css" />
     <Content Include="font-awesome\css\font-awesome.css" />
@@ -152,6 +157,7 @@
     <Content Include="img\icons\weather-icons.png" />
     <Content Include="img\icons\weather-main.png" />
     <Content Include="img\Mapa.png" />
+    <Content Include="img\statisticsBurkina.png" />
     <Content Include="img\team\CarolinaBernades.jpg" />
     <Content Include="img\team\DeborahCouto.jpg" />
     <Content Include="img\team\ElianeMartins.jpg" />
@@ -205,7 +211,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Donor\Doadores.cshtml" />
-    <Content Include="Views\Donation\DonationsTotal.cshtml" />
+    <Content Include="Views\Donation\Index.cshtml" />
+    <Content Include="videos\water change everything.ogg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
