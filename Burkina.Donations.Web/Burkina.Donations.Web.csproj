@@ -94,7 +94,8 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\main.css" />
-    <Content Include="home - Copy.html" />
+    <Content Include="DonationPage - Copy.html" />
+    <Content Include="DonationPage.html" />
     <Content Include="img\Burkina.png" />
     <Content Include="img\burkina1.png" />
     <Content Include="img\BurkinaFlag.jpg" />
