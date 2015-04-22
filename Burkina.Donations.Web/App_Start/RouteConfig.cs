@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Burkina.Donations.Web
@@ -13,6 +9,13 @@ namespace Burkina.Donations.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Default
+            routes.MapRoute(
+                null,
+                "{controller}/{action}"
+                );
+
+            //teste
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

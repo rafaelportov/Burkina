@@ -19,5 +19,10 @@ namespace Burkina.Donations.Web.Controllers
             var donation = _repository.Donation;
             return View(donation.ToList());
         }
+
+        public ViewResult ConfirmDonation()
+        {
+            return View(new Donation());
+        }
     }
 }

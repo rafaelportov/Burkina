@@ -94,7 +94,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\main.css" />
-    <Content Include="DonationPage - Copy.html" />
+    <Content Include="Home.html" />
     <Content Include="DonationPage.html" />
     <Content Include="img\Burkina.png" />
     <Content Include="img\burkina1.png" />
@@ -173,7 +173,6 @@
     <Content Include="img\team\RodrigoSantos.jpg" />
     <Content Include="img\team\ThayssaMartins.jpg" />
     <Content Include="img\team\VanessaOrsi.jpg" />
-    <Content Include="home.html" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\custom.js" />
@@ -192,6 +191,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="videos\Paussiel.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -214,6 +214,7 @@
     <Content Include="Views\Donor\Doadores.cshtml" />
     <Content Include="Views\Donation\Index.cshtml" />
     <Content Include="videos\water change everything.ogg" />
+    <Content Include="Views\Donation\ConfirmDonation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

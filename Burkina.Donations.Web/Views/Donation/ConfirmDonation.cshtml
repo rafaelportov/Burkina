@@ -1,0 +1,25 @@
+﻿@model Burkina.Donations.Domain.Entities.Donation
+
+@{
+    ViewBag.Title = "Confirmar Doação";
+}
+
+<h2>Realizando a doação</h2>
+<p>Digite suas informações abaixo</p>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <h3>Doador</h3>
+    <div class="form-group">
+        <label>Cód. Doador:</label>
+        @Html.TextBoxFor(x => x.ID_DONOR, new { @class = "form-control" })
+    </div>
+    <h3>Dados Bancários</h3>
+    <div class="form-group">
+        <label>Valor:</label>
+        @Html.TextBoxFor(x => x.VL_DONATION, new { @class = "form-control" })
+    </div>
+}
+
+
